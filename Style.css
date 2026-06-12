@@ -3,111 +3,155 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #000;
-    color: #fff;
-    animation: blackWhite 6s infinite alternate;
-    transition: all 0.5s ease;
+
+    /* พื้นหลังสีรุ้ง */
+    background: linear-gradient(
+        -45deg,
+        red,
+        orange,
+        yellow,
+        green,
+        cyan,
+        blue,
+        indigo,
+        violet
+    );
+    background-size: 400% 400%;
+    animation: rainbowBG 10s ease infinite;
+
+    color: #333;
 }
 
-@keyframes blackWhite {
+/* พื้นหลังสีรุ้งเคลื่อนไหว */
+@keyframes rainbowBG {
     0% {
-        background: #000000;
-        color: #ffffff;
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
     100% {
-        background: #ffffff;
-        color: #000000;
+        background-position: 0% 50%;
     }
 }
 
+/* Header สีรุ้ง */
 header {
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        cyan,
+        blue,
+        violet
+    );
+    background-size: 400% 400%;
+    animation: rainbowBG 5s linear infinite;
+
     color: white;
-    padding: 25px 0;
+    padding: 20px 0;
     text-align: center;
-    border-bottom: 2px solid #fff;
-    box-shadow: 0 0 20px rgba(255,255,255,0.5);
-    animation: fadeDown 1s ease;
 }
 
+/* ตัวอักษรสีรุ้ง */
 header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    text-shadow: 0 0 10px #fff;
+    font-size: 3rem;
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        cyan,
+        blue,
+        violet
+    );
+    background-size: 400%;
+    animation: rainbowText 3s linear infinite;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-header p {
-    margin-top: 8px;
+/* ตัวหนังสือสีรุ้ง */
+@keyframes rainbowText {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
 }
 
+/* กล่องเนื้อหา */
 section {
-    max-width: 850px;
-    margin: 25px auto;
-    padding: 25px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    background: rgba(20, 20, 20, 0.85);
-    color: #ffffff;
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 0 0 15px rgba(255,255,255,0.3);
-    animation: fadeUp 1s ease;
-    transition: all 0.4s ease;
+
+    animation: float 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+/* ลอยขึ้นลง */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 section:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: scale(1.05) rotate(1deg);
 }
 
-h2 {
-    color: #ffffff;
+/* หัวข้อสีรุ้ง */
+h2,
+h3 {
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        cyan,
+        blue,
+        violet
+    );
+    background-size: 400%;
+    animation: rainbowText 3s linear infinite;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.project {
-    margin-bottom: 25px;
-    padding: 15px;
-    border-left: 3px solid #ffffff;
-}
-
-.project h3 {
-    margin: 0 0 10px;
-}
-
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
+/* Footer สีรุ้ง */
 footer {
     text-align: center;
     padding: 15px;
-    background: rgba(0,0,0,0.85);
+
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        cyan,
+        blue,
+        violet
+    );
+    background-size: 400% 400%;
+    animation: rainbowBG 5s linear infinite;
+
     color: white;
-    border-top: 2px solid white;
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
