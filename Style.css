@@ -3,97 +3,82 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #000;
-    color: #fff;
-    animation: blackWhite 6s infinite alternate;
-    transition: all 0.5s ease;
+    background: linear-gradient(-45deg, #ff9ecf, #ff69b4, #ffc0cb, #ffb6c1);
+    background-size: 400% 400%;
+    animation: bgMove 8s ease infinite;
+    color: #333;
 }
 
-@keyframes blackWhite {
-    0% {
-        background: #000000;
-        color: #ffffff;
-    }
-    100% {
-        background: #ffffff;
-        color: #000000;
-    }
+/* พื้นหลังเคลื่อนไหว */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 header {
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(90deg, #ff69b4, #ff1493);
     color: white;
-    padding: 25px 0;
+    padding: 20px 0;
     text-align: center;
-    border-bottom: 2px solid #fff;
-    box-shadow: 0 0 20px rgba(255,255,255,0.5);
     animation: fadeDown 1s ease;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    text-shadow: 0 0 10px #fff;
 }
 
 header p {
-    margin-top: 8px;
+    margin: 5px 0 0;
 }
 
 section {
-    max-width: 850px;
-    margin: 25px auto;
-    padding: 25px;
-    border-radius: 15px;
-    background: rgba(20, 20, 20, 0.85);
-    color: #ffffff;
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
     animation: fadeUp 1s ease;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 section:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.6);
 }
 
 h2 {
-    color: #ffffff;
+    color: #ff1493;
 }
 
 .project {
-    margin-bottom: 25px;
-    padding: 15px;
-    border-left: 3px solid #ffffff;
+    margin-bottom: 20px;
 }
 
 .project h3 {
     margin: 0 0 10px;
+    color: #ff69b4;
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+ul {
+    list-style-type: square;
+    padding-left: 20px;
 }
 
 footer {
     text-align: center;
-    padding: 15px;
-    background: rgba(0,0,0,0.85);
+    padding: 10px 0;
+    background: linear-gradient(90deg, #ff1493, #ff69b4);
     color: white;
-    border-top: 2px solid white;
+    margin-top: 20px;
 }
 
+/* Animation */
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -104,7 +89,7 @@ footer {
 @keyframes fadeDown {
     from {
         opacity: 0;
-        transform: translateY(-40px);
+        transform: translateY(-30px);
     }
     to {
         opacity: 1;
