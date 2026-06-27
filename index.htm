@@ -3,61 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="เว็บไซต์แสดงผลงานและทักษะของ Somchai">
-    <title>ความภาคภูมิใจของ SOMCHAI</title>
+    <meta name="description" content="เว็บไซต์ Portfolio แสดงผลงานและทักษะของ Sitthinan นักเรียนชั้นมัธยมศึกษาปีที่ 6 ผู้สนใจด้านวิทยาศาสตร์และเคมี">
+    <meta name="author" content="Sitthinan">
+    <title>ความภาคภูมิใจของ Sitthinan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- ดาวตกตกแต่งพื้นหลัง -->
+    <div class="shooting-star star1"></div>
+    <div class="shooting-star star2"></div>
+    <div class="shooting-star star3"></div>
+    <div class="shooting-star star4"></div>
+
+    <a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหาหลัก</a>
+
     <!-- ส่วนหัวของเว็บ -->
     <header>
-        <h1>สวัสดี! ผมคือ SOMCHAI</h1>
+        <h1>สวัสดี! ผมคือ Sitthinan</h1>
         <p>นี่คือผลงานและความภาคภูมิใจของผม</p>
+        <nav>
+            <ul>
+                <li><a href="#about">เกี่ยวกับผม</a></li>
+                <li><a href="#projects">ผลงาน</a></li>
+                <li><a href="#skills">ทักษะ</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- ส่วนเกี่ยวกับตัวเอง -->
-    <section id="about">
-        <h2>เกี่ยวกับผม</h2>
-        <p>ผมเป็นนักพัฒนาซอฟต์แวร์ที่มีความหลงใหลในการสร้างสรรค์สิ่งใหม่ ๆ ผมภูมิใจในผลงานและทักษะที่ผมพัฒนามาอย่างต่อเนื่อง</p>
-    </section>
+    <main id="main-content">
 
-    <!-- ส่วนแสดงผลงาน -->
-    <section id="projects">
-        <h2>ผลงานของผม</h2>
+        <!-- ส่วนเกี่ยวกับตัวเอง -->
+        <section id="about">
+            <h2>เกี่ยวกับผม</h2>
+            <p>
+                ผมเป็นนักเรียนชั้นมัธยมศึกษาปีที่ 6 ที่มีความสนใจในด้านวิทยาศาสตร์
+                โดยเฉพาะการส่องกล้องจุลทรรศน์ ผมชอบเรียนรู้สิ่งใหม่ ๆ และกล้าที่จะ
+                ท้าทายตัวเองอยู่เสมอ
+            </p>
+        </section>
 
-        <div class="project">
-            <h3>เว็บไซต์ Portfolio</h3>
-            <p>เว็บไซต์นี้เป็นหนึ่งในผลงานที่ผมสร้างขึ้นเพื่อแสดงความสามารถของผม</p>
-        </div>
+        <!-- ส่วนแสดงผลงาน -->
+        <section id="projects">
+            <h2>ผลงานของผม</h2>
 
-        <div class="project">
-            <h3>แอปพลิเคชันจัดการงาน</h3>
-            <p>แอปพลิเคชันที่ช่วยให้ผู้ใช้งานจัดการงานได้อย่างมีประสิทธิภาพ</p>
-        </div>
-    </section>
+            <article class="project">
+                <h3>เว็บไซต์ Portfolio</h3>
+                <p>
+                    เว็บไซต์นี้เป็นหนึ่งในผลงานที่ผมสร้างขึ้นเพื่อแสดงความสามารถ
+                    ด้านการพัฒนาเว็บไซต์ของผม
+                </p>
+            </article>
 
-    <!-- ส่วนแสดงทักษะ -->
-    <section id="skills">
-        <h2>ทักษะของผม</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Python, Django</li>
-            <li>Git และ GitHub</li>
-            <li>การออกแบบ UI/UX</li>
-        </ul>
-    </section>
+            <article class="project">
+                <h3>การสอบ Chem Test</h3>
+                <p>
+                    การสอบ Chem Test เป็นการสอบวิชาเคมีในระดับประเทศ การสอบครั้งนี้
+                    ทำให้ผมได้รับประสบการณ์และความมั่นใจในการสอบมากขึ้น
+                </p>
+                <figure>
+                    <img
+                        src="IMG_1089.jpeg"
+                        alt="ภาพระหว่างการสอบ Chem Test"
+                        width="50%"
+                        loading="lazy"
+                    >
+                    <figcaption>ระหว่างการสอบ Chem Test ระดับประเทศ</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- ส่วนแสดงทักษะ -->
+        <section id="skills">
+            <h2>ทักษะของผม</h2>
+            <ul>
+                <li>การส่องกล้องจุลทรรศน์</li>
+                <li>ภาวะความเป็นผู้นำ จากการเคยเป็นหัวหน้าห้อง</li>
+                <li>การใช้งาน Git และ GitHub</li>
+                <li>เทคนิคการทำแล็บทางวิทยาศาสตร์ต่าง ๆ</li>
+            </ul>
+        </section>
+
+    </main>
 
     <!-- ส่วนติดต่อและลิขสิทธิ์ -->
-    <footer>
+    <footer id="contact">
         <p>
             ติดต่อผมได้ที่:
-            <a href="mailto:somchai@example.com">somchai@example.com</a>
+            <a href="mailto:rmi880013@gmail.com">rmi880013@gmail.com</a>
         </p>
-        <p>&copy; <span id="year"></span> SOMCHAI. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Sitthinan. All rights reserved.</p>
     </footer>
 
     <!-- ลิงก์ไปยัง JavaScript -->
     <script src="script.js"></script>
-
 </body>
 </html>
