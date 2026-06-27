@@ -6,11 +6,16 @@
     <meta name="description" content="เว็บไซต์ Portfolio แสดงผลงานและทักษะของ Sitthinan นักเรียนชั้นมัธยมศึกษาปีที่ 6 ผู้สนใจด้านวิทยาศาสตร์และเคมี">
     <meta name="author" content="Sitthinan">
     <title>ความภาคภูมิใจของ Sitthinan</title>
+
+    <!-- Google Font: Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ดาวตกตกแต่งพื้นหลัง -->
     <div class="shooting-star star1"></div>
     <div class="shooting-star star2"></div>
     <div class="shooting-star star3"></div>
@@ -18,7 +23,6 @@
 
     <a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหาหลัก</a>
 
-    <!-- ส่วนหัวของเว็บ -->
     <header>
         <h1>สวัสดี! ผมคือ Sitthinan</h1>
         <p>นี่คือผลงานและความภาคภูมิใจของผม</p>
@@ -34,8 +38,7 @@
 
     <main id="main-content">
 
-        <!-- ส่วนเกี่ยวกับตัวเอง -->
-        <section id="about">
+        <section id="about" class="reveal">
             <h2>เกี่ยวกับผม</h2>
             <p>
                 ผมเป็นนักเรียนชั้นมัธยมศึกษาปีที่ 6 ที่มีความสนใจในด้านวิทยาศาสตร์
@@ -44,8 +47,7 @@
             </p>
         </section>
 
-        <!-- ส่วนแสดงผลงาน -->
-        <section id="projects">
+        <section id="projects" class="reveal">
             <h2>ผลงานของผม</h2>
 
             <article class="project">
@@ -74,21 +76,30 @@
             </article>
         </section>
 
-        <!-- ส่วนแสดงทักษะ -->
-        <section id="skills">
+        <section id="skills" class="reveal">
             <h2>ทักษะของผม</h2>
-            <ul>
-                <li>การส่องกล้องจุลทรรศน์</li>
-                <li>ภาวะความเป็นผู้นำ จากการเคยเป็นหัวหน้าห้อง</li>
-                <li>การใช้งาน Git และ GitHub</li>
-                <li>เทคนิคการทำแล็บทางวิทยาศาสตร์ต่าง ๆ</li>
-            </ul>
+
+            <div class="skill-bar">
+                <span class="skill-label">การส่องกล้องจุลทรรศน์</span>
+                <div class="bar-bg"><div class="bar-fill" data-percent="90"></div></div>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-label">ภาวะความเป็นผู้นำ</span>
+                <div class="bar-bg"><div class="bar-fill" data-percent="80"></div></div>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-label">Git และ GitHub</span>
+                <div class="bar-bg"><div class="bar-fill" data-percent="70"></div></div>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-label">เทคนิคการทำแล็บ</span>
+                <div class="bar-bg"><div class="bar-fill" data-percent="85"></div></div>
+            </div>
         </section>
 
     </main>
 
-    <!-- ส่วนติดต่อและลิขสิทธิ์ -->
-    <footer id="contact">
+    <footer id="contact" class="reveal">
         <p>
             ติดต่อผมได้ที่:
             <a href="mailto:rmi880013@gmail.com">rmi880013@gmail.com</a>
@@ -96,7 +107,6 @@
         <p>&copy; <span id="year"></span> Sitthinan. All rights reserved.</p>
     </footer>
 
-    <!-- ลิงก์ไปยัง JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
